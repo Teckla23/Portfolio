@@ -1,0 +1,177 @@
+/* Base Canvas Overrides & Global Presets */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #ffffff;
+    color: #242321;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.01em;
+}
+
+/* Custom Palette Layout Background Variables */
+.bg-light-custom {
+    background-color: #f7f6f3 !important; /* Premium off-white gray base background */
+}
+.text-accent {
+    color: #ff5e3a !important; /* Premium vibrant orange accent token color */
+}
+
+/* Section Structural Architectures */
+.section-spacing {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+}
+.border-bottom-thick {
+    border-bottom: 2px solid #242321 !important;
+}
+.section-main-heading {
+    font-size: 2.2rem;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+    text-transform: none;
+}
+
+/* Page 1: Hero Landing Sliders Definitions */
+.avatar-logo-circle {
+    width: 42px;
+    height: 42px;
+    background-color: #ff5e3a;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    letter-spacing: initial;
+}
+.btn-resume-download {
+    border-color: #ff5e3a !important;
+    color: #ff5e3a !important;
+    transition: all 0.2s ease;
+}
+.btn-resume-download:hover {
+    background-color: #ff5e3a !important;
+    color: #ffffff !important;
+}
+.wave-hand-icon {
+    display: inline-block;
+    font-style: normal;
+}
+.object-fit-cover {
+    object-fit: cover;
+}
+.absolute-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.max-w-text {
+    max-width: 520px;
+}
+
+/* Page 2: About Slide Abstract Geometric Graphics Elements */
+.canva-abstract-shape-wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+.shape-top-orange {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 200px;
+    height: 130px;
+    background-color: #ff5e3a;
+    border-radius: 100px 100px 0 0;
+}
+.shape-bottom-black {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 200px;
+    height: 130px;
+    background-color: #111111;
+    border-radius: 0 0 100px 100px;
+}
+.badge-white-pill {
+    background-color: #ffffff !important;
+    color: #242321 !important;
+    border: 1px solid #e1e0dc;
+    font-weight: 500;
+    font-size: 0.8rem;
+    border-radius: 50rem;
+}
+
+/* Page 3: Timeline Row Elements */
+.experience-timeline-row {
+    border-bottom: 1px solid #e1e0dc;
+}
+.experience-timeline-row:last-of-type {
+    border-bottom: none;
+}
+.line-height-relaxed {
+    line-height: 1.7;
+}
+
+/* Page 4: Skills Matrix Dots & Track Elements */
+.education-node-line {
+    border-left: 2px solid #e1e0dc;
+}
+.education-bullet-node {
+    position: absolute;
+    left: -6px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: #ff5e3a;
+    border-radius: 50%;
+}
+.skill-card-box {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.skill-card-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04) !important;
+}
+.skill-dot-row .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e1e0dc;
+    display: inline-block;
+}
+.skill-dot-row .dot.fill-orange {
+    background-color: #ff5e3a !important;
+}
+
+/* Page 5: Contact Connection Hyperlink Elements */
+.contact-card-link {
+    font-size: 1.2rem;
+    border-bottom: 2px solid #ff5e3a;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    display: inline-block;
+    word-break: break-all;
+}
+.contact-card-link:hover {
+    color: #ff5e3a !important;
+    text-decoration: none;
+}
+.shadow-xs {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+}
+.canva-sans-label {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: 0.15em;
+}
+
+/* Media Utility Viewport Adaptation Queries */
+@media (min-width: 768px) {
+    .border-left-md {
+        border-left: 1px solid #e1e0dc !important;
+    }
+}
+@media (max-width: 767.98px) {
+    .section-spacing {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}

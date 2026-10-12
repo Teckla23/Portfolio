@@ -1,0 +1,13 @@
+CREATIVE COMMONS PORTFOLIO TEMPLATE LICENSE NOTICE
+
+1. CODEBASE AND TEMPLATE LAYOUT:
+The underlying structural code framework, layout geometry, grid distributions, animations, and CSS custom theme properties are released for free use under Creative Commons parameters. Anyone is free to copy, modify, and distribute this template structure for personal or educational purposes.
+
+2. EXCLUSION OF PERSONAL INTELLECTUAL PROPERTY & IDENTITY (STRICT RESTRICTION):
+This authorization DOES NOT apply to any personal identity items embedded within this workspace. You are strictly forbidden from copying, publishing, modifying, or reusing:
+- The name "Teckla GIRAMATA"
+- All personal portrait images or photographs located in the project directory (including "images/tee.jpg").
+- The text copy, specific professional work histories, and academic details mapping the original creator's biography.
+
+3. REMEDY AND WARRANTY:
+THE MATERIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THIS TEMPLATE.
