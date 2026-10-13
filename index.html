@@ -204,7 +204,7 @@
             gap            : 1.6rem;
             justify-content: center;
             margin         : var(--vspace-2) 0 0;
-            padding        : 0;
+            padding        : 2;
             list-style     : none;
         }
         .contact-links a {
@@ -236,6 +236,9 @@
             .timeline__title { font-size: 2rem; }
             .contact-links a { width: 100%; justify-content: center; }
         }
+
+
+        
     </style>
 
 </head>
@@ -562,53 +565,272 @@
                     </ul>
                 </div>
                 
-                <!-- contact-- 
-            <section id="contact" class="s-contact section-pad">
+<!-- Contact Section -->
+<section id="contact" class="s-contact section-pad">
 
-                <div class="row row-x-center text-center">
-                    <div class="column xl-8 lg-12">
+    <div class="contact-two-columns">
 
-                        <div class="text-pretitle" style="color: var(--color-1);">Contact Me</div>
-                        <h2 class="text-display-title">
-                        Let's work together.
-                        </h2>
-                        <p class="lead">
-                        Have a role, a project, or an IT challenge in mind? I'd love to hear from you.
-                        </p>
+        <!-- LEFT COLUMN: Introduction -->
+        <div class="contact-intro-panel">
 
-                        <ul class="contact-links">
-                            <li>
-                                <a href="https://www.instagram.com/tecklagiramata/" target="_blank" rel="noopener">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.62c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.19.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.42-.35 1.04-.4 2.19-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.4 2.19.22.55.47.94.88 1.35.41.41.8.66 1.35.88.42.16 1.04.35 2.19.4 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.19-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.42.35-1.04.4-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.4-2.19a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.42-.16-1.04-.35-2.19-.4-1.24-.06-1.61-.07-4.76-.07Zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92Zm0 9a3.54 3.54 0 1 0 0-7.08 3.54 3.54 0 0 0 0 7.08Zm6.95-9.22a1.28 1.28 0 1 1-2.55 0 1.28 1.28 0 0 1 2.55 0Z"/></svg>
-                                    Instagram
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://linkedin.com/in/teckla-giramata-musamankanda-5120841a6" target="_blank" rel="noopener">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
-                                    LinkedIn
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:Tecklagiramata@gmail.com">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.24-8 5-8-5V6l8 5 8-5v2.24Z"/></svg>
-                                    Tecklagiramata@gmail.com
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </section> 
-            end s-contact -->
-<!-- contact ----------------------------------------------- --> <section id="contact" class="s-contact section-pad"> <div class="row contact-layout"> <!-- LEFT COLUMN: Heading and Introduction --> <div class="column contact-intro"> <div class="text-pretitle" style="color: var(--color-1);"> Contact Me </div> <h2 class="text-display-title"> Let's work together. </h2> <p class="lead"> Have a role, a project, or an IT challenge in mind? I'd love to hear from you. </p> </div> <!-- RIGHT COLUMN: Social Media and Contact Links --> <div class="column contact-details"> <ul class="contact-links"> <!-- Instagram --> <li> <a href="https://www.instagram.com/tecklagiramata/" target="_blank" rel="noopener noreferrer"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"> <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.62c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.19.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.42-.35 1.04-.4 2.19-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.4 2.19.22.55.47.94.88 1.35.41.41.8.66 1.35.88.42.16 1.04.35 2.19.4 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.19-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.42.35-1.04.4-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.4-2.19a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.42-.16-1.04-.35-2.19-.4-1.24-.06-1.61-.07-4.76-.07Zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92Zm0 9a3.54 3.54 0 1 0 0-7.08 3.54 3.54 0 0 0 0 7.08Zm6.95-9.22a1.28 1.28 0 1 1-2.55 0 1.28 1.28 0 0 1 2.55 0Z"/> </svg> <span>Instagram</span> </a> </li> <!-- LinkedIn --> <li> <a href="https://linkedin.com/in/teckla-giramata-musamankanda-5120841a6" target="_blank" rel="noopener noreferrer"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"> <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/> </svg> <span>LinkedIn</span> </a> </li> <!-- Email --> <li> <a href="mailto:Tecklagiramata@gmail.com"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"> <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.24-8 5-8-5V6l8 5 8-5v2.24Z"/> </svg> <span>Tecklagiramata@gmail.com</span> </a> </li> </ul> </div> </div> </section> <!-- end s-contact -->
+            <div class="text-pretitle">
+                Contact Me
             </div>
+
+            <h3 class="text-display-title">
+                Let's work together.
+            </h3>
+
+            <p class="lead">
+                Have a role, a project, or an IT challenge in mind?
+                I'd love to hear from you.
+            </p>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Contact Links -->
+        <div class="contact-links-panel">
+
+            <h3 class="contact-panel-title">Get in Touch</h3>
+
+            <ul class="contact-links">
+
+                <!-- Instagram -->
+                <li>
+                    <a href="https://www.instagram.com/tecklagiramata/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 24 24"
+                             aria-hidden="true">
+                            <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.62c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.19.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.42-.35 1.04-.4 2.19-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.4 2.19.22.55.47.94.88 1.35.41.41.8.66 1.35.88.42.16 1.04.35 2.19.4 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.19-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.42.35-1.04.4-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.4-2.19a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.42-.16-1.04-.35-2.19-.4-1.24-.06-1.61-.07-4.76-.07Zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92Zm0 9a3.54 3.54 0 1 0 0-7.08 3.54 3.54 0 0 0 0 7.08Zm6.95-9.22a1.28 1.28 0 1 1-2.55 0 1.28 1.28 0 0 1 2.55 0Z"/>
+                        </svg>
+
+                        <span>Instagram</span>
+                    </a>
+                </li>
+
+                <!-- LinkedIn -->
+                <li>
+                    <a href="https://linkedin.com/in/teckla-giramata-musamankanda-5120841a6"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 24 24"
+                             aria-hidden="true">
+                            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/>
+                        </svg>
+
+                        <span>LinkedIn</span>
+                    </a>
+                </li>
+
+                <!-- Email -->
+                <li>
+                    <a href="mailto:Tecklagiramata@gmail.com">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 24 24"
+                             aria-hidden="true">
+                            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.24-8 5-8-5V6l8 5 8-5v2.24Z"/>
+                        </svg>
+
+                        <span>Tecklagiramata@gmail.com</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- End Contact Section -->
+
+
+<style>
+/* Compact Contact Section */
+#contact {
+    padding: 25px 20px !important;
+}
+
+/* Two-column container */
+#contact .contact-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    align-items: stretch;
+}
+
+/* Left column */
+#contact .contact-intro-panel {
+    background-color: #f2f4f7;
+    color: #20252b;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Right column */
+#contact .contact-links-panel {
+    background-color: #20252b;
+    color: #fff8e8;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Small section label */
+#contact .text-pretitle {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* Main heading — ensure sufficient contrast */
+#contact .text-display-title {
+    color: #20252b !important;
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+/* Introductory paragraph */
+#contact .lead {
+    color: #454b54 !important;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Right column heading */
+#contact .contact-links-panel h2,
+#contact .contact-links-panel h3 {
+    color: #fff8e8;
+    font-size: clamp(30px, 3vw, 42px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Contact links container */
+#contact .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Individual links */
+#contact .contact-links li {
+    margin: 0;
+    max-width: 100%;
+}
+
+/* Link appearance */
+#contact .contact-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    border: 1px solid #555a62;
+    border-radius: 40px;
+    color: #fff8e8;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover effect */
+#contact .contact-links a:hover {
+    background-color: #303640;
+    border-color: #ff9d24;
+}
+
+/* Icons */
+#contact .contact-links svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Tablet and mobile */
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 20px 15px !important;
+    }
+
+    #contact .contact-two-columns {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+    }
+
+    #contact .contact-intro-panel,
+    #contact .contact-links-panel {
+        padding: 28px 22px;
+    }
+
+    #contact .text-display-title {
+        font-size: 30px;
+    }
+
+    #contact .contact-links-panel h2,
+    #contact .contact-links-panel h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Narrow mobile screens */
+@media screen and (max-width: 420px) {
+    #contact .contact-intro-panel,
+    #contact .contact-links-panel {
+        padding: 24px 16px;
+    }
+
+    #contact .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #contact .contact-links li,
+    #contact .contact-links a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #contact .contact-links a {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+}
+</style>
+
+
 
             <div class="row s-footer__bottom">
                 <div class="column xl-6 lg-12">
                     <p class="ss-copyright">
-                        <span>© <span id="year"></span> Teckla Giramata Musamankanda</span>
+                        <span>© <span id="year">
+
+                        </span> Teckla Giramata Musamankanda</span>
                         <span>Kigali, Rwanda</span>
                     </p>
                 </div>
