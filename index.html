@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Teckla Giramata Musamankanda — IT Support Desktop Engineer</title>
+    <meta name="description" content="Portfolio of Teckla Giramata Musamankanda — Level 1 IT Support Desktop Engineer based in Kigali, Rwanda.">
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- custom single-page styles
+    ================================================== -->
+    <style>
+        /* ---- fixed navigation ---- */
+        .s-header {
+            position        : fixed;
+            top             : 0;
+            left            : 0;
+            width           : 100%;
+            background-color: transparent;
+            transition      : background-color .35s ease, box-shadow .35s ease;
+        }
+        .s-header.is-scrolled {
+            background-color: var(--color-2-dark);
+            box-shadow      : 0 2px 24px rgba(0, 0, 0, .28);
+        }
+        .s-header__logo .logo-text {
+            font-family   : var(--font-2);
+            font-size     : 2.6rem;
+            line-height   : 1;
+            color         : var(--color-3);
+            letter-spacing: .01em;
+        }
+        .s-header__logo .logo-text span { color: var(--color-1); }
+
+        /* let the hero grow with its content so nothing is clipped on short viewports */
+        .s-intro {
+            height    : auto;
+            min-height: max(var(--content-min-height), 100vh);
+        }
+
+        /* anchor offset so sections are not hidden under the fixed header */
+        section[id] { scroll-margin-top: 9rem; }
+
+        /* ---- shared section helpers ---- */
+        .section-pad {
+            padding-top   : var(--vspace-6);
+            padding-bottom: var(--vspace-6);
+        }
+
+        /* ---- experience timeline ---- */
+        .s-experience { background-color: var(--color-3); }
+        .timeline {
+            position  : relative;
+            margin-top: var(--vspace-1_5);
+        }
+        .timeline__item {
+            position     : relative;
+            padding-left : 4rem;
+            padding-bottom: var(--vspace-2);
+            border-left  : 2px solid var(--color-1-lighter);
+        }
+        .timeline__item:last-child {
+            border-left-color: transparent;
+            padding-bottom   : 0;
+        }
+        .timeline__item::before {
+            content      : "";
+            position     : absolute;
+            left         : -9px;
+            top          : 6px;
+            width        : 16px;
+            height       : 16px;
+            border-radius: 50%;
+            background   : var(--color-1);
+            border       : 3px solid var(--color-3);
+        }
+        .timeline__date {
+            display       : inline-block;
+            font-family   : var(--font-1);
+            font-size     : 1.3rem;
+            font-weight   : 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color         : var(--color-1-dark);
+        }
+        .timeline__title {
+            font-size  : 2.4rem;
+            line-height: 1.2;
+            margin     : .6rem 0 .3rem;
+            color      : var(--color-text-dark);
+        }
+        .timeline__org {
+            font-family  : var(--font-1);
+            font-size    : 1.6rem;
+            font-weight  : 500;
+            color        : var(--color-gray-13);
+            margin-bottom: var(--vspace-0_5);
+        }
+        .timeline__text p { font-size: 1.6rem; line-height: 1.7; margin-bottom: 0; }
+
+        /* ---- education & skills ---- */
+        .s-education { background-color: var(--color-3-light); }
+        .edu-card {
+            padding      : 2.4rem 2.6rem;
+            background   : var(--color-white);
+            border-left  : 3px solid var(--color-1);
+            box-shadow   : 0 10px 30px -18px rgba(0, 0, 0, .25);
+            margin-bottom: 1.6rem;
+        }
+        .edu-card__date {
+            font-family   : var(--font-1);
+            font-size     : 1.3rem;
+            font-weight   : 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color         : var(--color-1-dark);
+        }
+        .edu-card__title {
+            font-size  : 2rem;
+            line-height: 1.25;
+            margin     : .5rem 0 .3rem;
+            color      : var(--color-text-dark);
+        }
+        .edu-card__org {
+            font-family: var(--font-1);
+            font-size  : 1.5rem;
+            color      : var(--color-gray-13);
+            margin     : 0;
+        }
+        .edu-card__text { font-size: 1.5rem; line-height: 1.65; margin: .8rem 0 0; }
+        .subhead {
+            font-family   : var(--font-1);
+            font-size     : 1.4rem;
+            font-weight   : 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color         : var(--color-1-dark);
+            margin        : var(--vspace-1_5) 0 var(--vspace-0_75);
+        }
+        .skill-tags {
+            display   : flex;
+            flex-wrap : wrap;
+            gap       : 1rem;
+            margin    : 0;
+            padding   : 0;
+            list-style: none;
+        }
+        .skill-tags li {
+            font-family  : var(--font-1);
+            font-size    : 1.4rem;
+            font-weight  : 500;
+            padding      : .8rem 1.6rem;
+            background   : var(--color-1-lightest);
+            color        : var(--color-1-darker);
+            border       : 1px solid var(--color-1-lighter);
+            border-radius: 100px;
+        }
+        .lang-list {
+            display   : flex;
+            flex-wrap : wrap;
+            gap       : 2.4rem;
+            margin    : 0;
+            padding   : 0;
+            list-style: none;
+        }
+        .lang-list li {
+            font-family: var(--font-1);
+            font-size  : 1.6rem;
+            color      : var(--color-text-dark);
+        }
+        .lang-list li strong { color: var(--color-1-dark); }
+
+        /* ---- contact ---- */
+        .s-contact {
+            background-color: var(--color-2-dark);
+            color           : var(--color-3);
+            text-align      : center;
+        }
+        .s-contact .text-display-title { color: var(--color-3); }
+        .s-contact .lead { color: rgba(255, 255, 255, .72); font-weight: 300; }
+        .contact-links {
+            display        : flex;
+            flex-wrap      : wrap;
+            gap            : 1.6rem;
+            justify-content: center;
+            margin         : var(--vspace-2) 0 0;
+            padding        : 0;
+            list-style     : none;
+        }
+        .contact-links a {
+            display      : inline-flex;
+            align-items  : center;
+            gap          : 1rem;
+            font-family  : var(--font-1);
+            font-size    : 1.6rem;
+            color        : var(--color-3);
+            padding      : 1.4rem 2.6rem;
+            border       : 1px solid rgba(255, 255, 255, .22);
+            border-radius: 100px;
+            transition   : all .3s ease;
+        }
+        .contact-links a:hover,
+        .contact-links a:focus {
+            border-color: var(--color-1);
+            color       : var(--color-1);
+            transform   : translateY(-2px);
+        }
+        .contact-links svg { width: 20px; height: 20px; fill: currentColor; }
+
+        /* ---- footer ---- */
+        .s-footer { padding-top: var(--vspace-3); padding-bottom: var(--vspace-3); }
+        .s-footer__bottom { border-top: 1px solid rgba(255, 255, 255, .06); padding-top: var(--vspace-1); }
+
+        @media screen and (max-width: 800px) {
+            .timeline__item { padding-left: 3rem; }
+            .timeline__title { font-size: 2rem; }
+            .contact-links a { width: 100%; justify-content: center; }
+        }
+    </style>
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+
+        <!-- # site header
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="row s-header__inner width-sixteen-col">
+
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="#top">
+                            <span class="logo-text">Teckla<span>.</span></span>
+                        </a>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
+
+                <nav class="s-header__nav">
+
+                    <ul class="s-header__menu-links">
+                        <li><a class="smoothscroll" data-mt-tolerance="90" href="#top">Home</a></li>
+                        <li><a class="smoothscroll" data-mt-tolerance="90" href="#about">About</a></li>
+                        <li><a class="smoothscroll" data-mt-tolerance="90" href="#experience">Experience</a></li>
+                        <li><a class="smoothscroll" data-mt-tolerance="90" href="#education">Education &amp; Skills</a></li>
+                        <li><a class="smoothscroll" data-mt-tolerance="90" href="#contact">Contact</a></li>
+                    </ul> <!-- s-header__menu-links -->
+
+                    <div class="s-header__contact">
+                        <a href="#contact" class="btn btn--primary s-header__contact-btn smoothscroll" data-mt-tolerance="90">Let's Connect</a>
+                    </div> <!-- s-header__contact -->
+
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+
+        </header> <!-- end s-header -->
+
+
+        <!-- # site main content
+        ================================================== -->
+        <section id="content" class="s-content">
+
+            <!-- intro / hero
+            ----------------------------------------------- -->
+            <section id="home" class="s-intro">
+
+                <div class="row s-intro__content width-sixteen-col">
+
+                    <div class="column lg-12 s-intro__content-inner grid-block">
+
+                        <div class="s-intro__content-text">
+                            <div class="s-intro__content-pretitle text-pretitle">Hello, I'm Teckla</div>
+                            <h1 class="s-intro__content-title">
+                            I keep people <br>
+                            working — solving <br>
+                            the tech problems <br>
+                            that slow them down.
+                            </h1>
+                            <p class="lead" style="color: rgba(255,255,255,.75); max-width: 46rem; font-weight: 300;">
+                            Level 1 IT Support Desktop Engineer based in Kigali, Rwanda — turning everyday
+                            IT headaches into smooth, secure, and productive workdays.
+                            </p>
+                        </div> <!-- s-intro__content-text -->
+
+                        <div class="s-intro__content-media">
+                            <div class="s-intro__content-media-inner">
+                                <img src="images/teckla-portrait.png" alt="Portrait of Teckla Giramata Musamankanda">
+                                <div class="lines">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div> <!-- s-intro__content-media -->
+
+                        <div class="s-intro__scroll-down">
+                            <a href="#about" class="smoothscroll" data-mt-tolerance="90">
+                                <div class="scroll-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#97b34a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 13 12 18 17 13"></polyline><line x1="12" y1="18" x2="12" y2="6"></line></svg>
+                                </div>
+                                <span>Scroll for more</span>
+                            </a>
+                        </div> <!-- s-intro__scroll-down -->
+
+                    </div> <!-- s-intro__content-inner -->
+
+                </div> <!-- s-intro__content -->
+
+            </section> <!-- end s-intro -->
+
+
+            <!-- about
+            ----------------------------------------------- -->
+            <section id="about" class="s-about target-section">
+
+                <div class="row s-about__content width-sixteen-col">
+                    <div class="column grid-block grid-section-split">
+
+                        <img src="images/geometric_shape.svg" alt="" class="s-about__content-imgbg">
+
+                        <div class="section-header grid-section-split__header">
+                            <div class="text-pretitle">About Me</div>
+                            <h2 class="text-display-title">
+                            I turn technical problems into calm, confident workdays.
+                            </h2>
+                        </div> <!-- end section-header -->
+
+                        <div class="s-about__content-main grid-section-split__primary">
+                            <p class="attention-getter">
+                            I'm a customer-focused IT Support Professional with hands-on experience in
+                            end-user support, technical troubleshooting, and problem resolution. Every day
+                            I help people get back to work — diagnosing and fixing hardware, software,
+                            Microsoft 365, and access issues before they become roadblocks.
+                            </p>
+
+                            <p class="attention-getter">
+                            I'm proactive, adaptable, and genuinely committed to delivering efficient IT
+                            solutions and exceptional service experiences. I believe great support is as
+                            much about listening and clear communication as it is about the fix itself —
+                            which is why I pair strong technical skills with a service-first mindset.
+                            </p>
+
+                            <p class="attention-getter">
+                            Currently a Level 1 IT Support Desktop Engineer at Call Center International,
+                            I manage incidents and service requests end to end while maintaining a high
+                            standard of user satisfaction. I'm also continuing to grow — studying toward a
+                            Bachelor of Technology in Information Technology and sharpening my skills across
+                            Windows, Microsoft 365, and IT service management.
+                            </p>
+                        </div> <!-- end s-about__content-main -->
+
+                        <div class="s-about__content-btn grid-section-split__bottom">
+                            <a href="#contact" class="btn btn--stroke u-fullwidth smoothscroll" data-mt-tolerance="90">Get in Touch</a>
+                        </div> <!-- end s-about__content-btn -->
+
+                    </div> <!-- content-inner -->
+                </div>
+
+            </section> <!-- end s-about -->
+
+
+            <!-- experience
+            ----------------------------------------------- -->
+            <section id="experience" class="s-experience section-pad">
+
+                <div class="row width-sixteen-col">
+                    <div class="column xl-12 grid-block grid-section-split">
+
+                        <div class="section-header grid-section-split__header">
+                            <div class="text-pretitle">Experience</div>
+                            <h2 class="text-display-title">
+                            Where I've made a difference.
+                            </h2>
+                            <p class="lead">
+                            A track record of resolving issues quickly, keeping users productive, and
+                            delivering service people can rely on.
+                            </p>
+                        </div> <!-- end section-header -->
+
+                        <div class="grid-section-split__primary">
+                            <div class="timeline">
+
+                                <div class="timeline__item">
+                                    <span class="timeline__date">04/2025 – Present</span>
+                                    <h3 class="timeline__title">Level 1 IT Support Desktop Engineer</h3>
+                                    <div class="timeline__org">Call Center International (CCI) · Kigali, Rwanda</div>
+                                    <div class="timeline__text">
+                                        <p>
+                                        Provide first-line IT support by diagnosing and resolving hardware, software,
+                                        Microsoft 365, and access-related issues. Manage incidents and service requests
+                                        efficiently while maintaining a high standard of customer service and user
+                                        satisfaction.
+                                        </p>
+                                    </div>
+                                </div> <!-- timeline__item -->
+
+                                <div class="timeline__item">
+                                    <span class="timeline__date">09/2023 – 03/2025</span>
+                                    <h3 class="timeline__title">Customer Service Representative</h3>
+                                    <div class="timeline__org">Call Center International (CCI) · Kigali, Rwanda</div>
+                                    <div class="timeline__text">
+                                        <p>
+                                        Provided customer support to international clients through phone and email,
+                                        resolving inquiries and issues efficiently while maintaining strong customer
+                                        relationships. Strengthened communication, problem-solving, and cross-cultural
+                                        collaboration skills in a fast-paced environment.
+                                        </p>
+                                    </div>
+                                </div> <!-- timeline__item -->
+
+                            </div> <!-- end timeline -->
+                        </div> <!-- end grid-section-split__primary -->
+
+                    </div> <!-- end grid-block -->
+                </div> <!-- end row -->
+
+            </section> <!-- end s-experience -->
+
+
+            <!-- education & skills
+            ----------------------------------------------- -->
+            <section id="education" class="s-education section-pad">
+
+                <div class="row width-sixteen-col">
+                    <div class="column xl-12 grid-block grid-section-split">
+
+                        <div class="section-header grid-section-split__header">
+                            <div class="text-pretitle">Education &amp; Skills</div>
+                            <h2 class="text-display-title">
+                            Always learning, always improving.
+                            </h2>
+                            <p class="lead">
+                            A solid technical foundation, backed by continuous training and a
+                            service-first skill set.
+                            </p>
+                        </div> <!-- end section-header -->
+
+                        <div class="grid-section-split__primary">
+
+                            <div class="edu-card">
+                                <span class="edu-card__date">02/2026 – Present</span>
+                                <h3 class="edu-card__title">Bachelor of Technology in Information Technology</h3>
+                                <p class="edu-card__org">St Joseph Integrated Technical College · Kigali, Rwanda</p>
+                            </div>
+
+                            <div class="edu-card">
+                                <span class="edu-card__date">2021 – 2024</span>
+                                <h3 class="edu-card__title">Advanced Diploma in Information Technology</h3>
+                                <p class="edu-card__org">Integrated Polytechnic Regional College – IPRC Tumba · Rwanda</p>
+                            </div>
+
+                            <h4 class="subhead">Courses &amp; Training</h4>
+
+                            <div class="edu-card">
+                                <span class="edu-card__date">12/2025 – 02/2026</span>
+                                <h3 class="edu-card__title">IT Academy Course</h3>
+                                <p class="edu-card__org">Call Center International (CCI) · Kigali, Rwanda</p>
+                                <p class="edu-card__text">
+                                Completed trainings covering incident management, troubleshooting, ticket handling,
+                                customer support, and best practices for delivering effective IT services.
+                                </p>
+                            </div>
+
+                            <div class="edu-card">
+                                <span class="edu-card__date">07/2024 – 09/2024</span>
+                                <h3 class="edu-card__title">Virtual Assistance</h3>
+                                <p class="edu-card__org">ALX Rwanda · Kigali, Rwanda</p>
+                                <p class="edu-card__text">
+                                Gained foundational knowledge in procurement processes, supplier management,
+                                purchasing strategies, contract management, and supply chain best practices.
+                                </p>
+                            </div>
+
+                            <h4 class="subhead">Core Skills</h4>
+                            <ul class="skill-tags">
+                                <li>Microsoft 365 Administration &amp; Support</li>
+                                <li>Incident &amp; Ticket Management</li>
+                                <li>Hardware &amp; Software Troubleshooting</li>
+                                <li>End-User Support</li>
+                                <li>Windows 10 &amp; Windows 11 Support</li>
+                                <li>Customer Service &amp; Active Listening</li>
+                                <li>Teamwork &amp; Problem-Solving</li>
+                            </ul>
+
+                            <h4 class="subhead">Languages</h4>
+                            <ul class="lang-list">
+                                <li><strong>Kinyarwanda</strong> — Native</li>
+                                <li><strong>English</strong> — Professional</li>
+                            </ul>
+
+                        </div> <!-- end grid-section-split__primary -->
+
+                    </div> <!-- end grid-block -->
+                </div> <!-- end row -->
+
+            </section> <!-- end s-education -->
+
+
+
+
+        </section> <!-- s-content -->
+
+
+        <!-- # footer
+        ================================================== -->
+        <footer class="s-footer">
+            <div class="row s-footer__content">
+                <div class="column xl-6 lg-6 md-12 s-footer__block s-footer__about">
+                    <h3>Teckla Giramata Musamankanda</h3>
+                    <p>
+                    Level 1 IT Support Desktop Engineer based in Kigali, Rwanda. Customer-focused,
+                    proactive, and committed to delivering efficient IT solutions and exceptional
+                    service experiences.
+                    </p>
+                </div>
+                <div class="column xl-3 lg-6 md-12 s-footer__block s-footer__site-links">
+                    <h3>Explore</h3>
+                    <ul class="link-list">
+                        <li><a class="smoothscroll" data-mt-tolerance="90" href="#about">About</a></li>
+                        <li><a class="smoothscroll" data-mt-tolerance="90" href="#experience">Experience</a></li>
+                        <li><a class="smoothscroll" data-mt-tolerance="90" href="#education">Education &amp; Skills</a></li>
+                        <li><a class="smoothscroll" data-mt-tolerance="90" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="column xl-3 lg-6 md-12 tab-12 s-footer__block">
+                    <h3>Connect</h3>
+                    <ul class="link-list">
+                        <li><a href="https://www.instagram.com/tecklagiramata/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://linkedin.com/in/teckla-giramata-musamankanda-5120841a6" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="mailto:Tecklagiramata@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row s-footer__bottom">
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>© <span id="year"></span> Teckla Giramata Musamankanda</span>
+                        <span>Kigali, Rwanda</span>
+                    </p>
+                </div>
+
+                <div class="ss-go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top" data-mt-tolerance="90">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 11 12 6 7 11"></polyline><line x1="12" y1="18" x2="12" y2="6"></line></svg>
+                    </a>
+                </div> <!-- end ss-go-top -->
+            </div>
+
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end page-wrap -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        (function () {
+            'use strict';
+
+            // current year in footer
+            var yearEl = document.getElementById('year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            // solid header once the page is scrolled
+            var header = document.querySelector('.s-header');
+            function onScroll() {
+                if (!header) return;
+                if (window.scrollY > 40) header.classList.add('is-scrolled');
+                else header.classList.remove('is-scrolled');
+            }
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            // highlight the nav link of the section currently in view
+            var links = Array.prototype.slice.call(document.querySelectorAll('.s-header__menu-links a'));
+            var sections = links
+                .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+                .filter(Boolean);
+
+            if ('IntersectionObserver' in window && sections.length) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        links.forEach(function (a) {
+                            var active = a.getAttribute('href') === '#' + entry.target.id;
+                            a.parentElement.classList.toggle('current', active);
+                        });
+                    });
+                }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+                sections.forEach(function (s) { observer.observe(s); });
+            }
+        })();
+    </script>
+
+</body>
+</html>
